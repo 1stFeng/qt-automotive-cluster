@@ -1,0 +1,79 @@
+package com.mosi.mosc
+
+interface InfotainmentBridge {
+    version { major 1 minor 0 }
+
+    enumeration MediaSource{
+		USB,
+		RADIO,
+		BT,
+        ONLINE_MUSIC,
+        ONLINE_RADIO
+    }
+	
+	enumeration MediaStatus {
+		PLAYING,
+		PAUSED,
+		STOPPED
+	}
+	
+	struct PlayStatus {
+	    MediaSource source
+		MediaStatus status		
+	}
+	
+	struct Song {
+		MediaSource source
+		String songName
+		String singer
+		UInt64 duration
+		ByteBuffer albumArt
+	}
+
+	struct Progress {
+		MediaSource source
+		UInt16 value
+	}
+	
+	struct Tbt {
+		UInt32 iconType
+		UInt32 distanceToNext
+		String currentRoad
+		String nextRoad
+	}
+
+    attribute Boolean serviceStatus readonly
+    
+    broadcast songDetail {
+		out {
+			Song song
+		}
+	}
+
+    broadcast currentProgress {
+        out {
+			Progress progress
+        }
+    }
+	
+	broadcast playStatus {
+        out {
+			PlayStatus status
+        }
+    }
+	
+	broadcast tbtInfo {
+		out {
+			Tbt tbt
+		}
+	}
+
+}
+
+typeCollection CommonTypes{
+    version { major 1 minor 0 }
+
+    const String DomainValue = "android"
+    const String ServiceInstanceID = "infotainmentBridge"
+}
+

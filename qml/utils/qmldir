@@ -1,0 +1,7 @@
+singleton Logging 1.0 Logging.qml
+Store 1.0 Store.qml
+singleton Config 1.0 Config.qml
+Cursor 1.0 Cursor.qml
+AppButton 1.0 AppButton.qml
+AppIcon 1.0 AppIcon.qml
+Blinker 1.0 Blinker.qml

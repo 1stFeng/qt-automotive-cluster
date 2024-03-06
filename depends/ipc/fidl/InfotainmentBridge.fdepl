@@ -1,0 +1,19 @@
+import "platform:/plugin/com.fawvw.commonapi.fdbus/deployment/CommonAPI-4-FDBus_deployment_spec.fdepl"
+import "InfotainmentBridge.fidl"
+
+define com.fawvw.commonapi.fdbus.deployment for provider as Service {
+    instance com.mosi.mosc.InfotainmentBridge {
+        Domain="android"
+        InstanceId="infotainmentBridge"
+
+        ActivateReconnect = true
+        EnableReconnect = true
+        EnableTcpBlockingMode = true
+        EnableAysncWrite = true
+        EnableAysncRead = true
+        EnableBlockingMode = true
+        EnableTCP = true
+        EnableTCPSecure = true
+        ExportableLevel = 1     
+    }
+}

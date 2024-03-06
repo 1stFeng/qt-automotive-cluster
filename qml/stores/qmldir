@@ -1,0 +1,4 @@
+RootStoreInterface 1.0 RootStoreInterface.qml
+VehicleInterface 1.0 VehicleInterface.qml
+ExternalDataInterface 1.0 ExternalDataInterface.qml
+BehaviourInterface 1.0 BehaviourInterface.qml

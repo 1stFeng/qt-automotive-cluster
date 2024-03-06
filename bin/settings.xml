@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings>
+    <procedureSetting>
+        <integer name="playCustomAni">1</integer> <!-- 1播放自定义动画；0不播放。默认播放-->
+    </procedureSetting>
+    <animationSetting>
+        <integer name="play">1</integer> <!-- 1播放片头动画；0不播放。默认播放动画-->
+        <integer name="frameStart">0</integer> <!-- 起始帧数，0代表动画的第一帧-->
+        <integer name="frameEnd">223</integer> <!-- 结束帧数(0 - 223帧) , 只播放芯驰logo部分动画可以尝试将该值设置为48-->
+    </animationSetting>
+    <bkgSetting>
+         <integer name="bkgChange">1</integer> <!-- 1自定义动画过程中会周期的切换到Navi画面与3D车模展示画面; 0不切换。[该值只在自定义动画过程中起作用]-->
+        <integer name="cycle">2</integer> <!-- 从主画面切换到Navi画面的周期数，约定车辆区域动画的一个往复算一个周期，该值要大于等于1才有意义。[该值只在自定义动画过程中起作用]-->
+        <integer name="duration">6</integer> <!-- Navi画面停留持续时间 , 单位秒。 [该值只在自定义动画过程中起作用]-->
+        <integer name="showSwitch">1</integer> <!-- 3D车模展示开关 , 1表示展示，0不展示。 [该值只在自定义动画过程中起作用]-->
+        <integer name="showDuration">20</integer> <!-- 3D车模展示时长 , 单位秒。 [该值只在自定义动画过程中起作用]-->
+        <integer name="roundSpeed">10000</integer> <!--  3D车模旋转一周所用时间, 单位ms。 [该值只在自定义动画过程中起作用]-->
+        <integer name="delayTime">0</integer> <!--  3D车模延迟出现的时间, 用来规避模型出现时显示的问题，单位ms。默认为0，具体设置多少按照实际情况进行调整。 [该值只在自定义动画过程中起作用]-->
+    </bkgSetting>
+    <indicatorSetting>
+        <integer name="temperatureNumber">20</integer> <!-- 温度 [0-99]-->
+        <integer name="odoNumber">16888</integer> <!-- odo [0-99999]-->
+        <integer name="dteNumber">350</integer> <!-- dte [0-999]-->
+        <integer name="temperatureChangeCycle">5</integer> <!-- 温度更改周期，单位s。[该值只在自定义动画过程中起作用]-->
+        <integer name="odoChangeCycle">20</integer> <!-- odo值更改周期，单位s。[该值只在自定义动画过程中起作用]-->
+        <integer name="dteChangeCycle">20</integer> <!-- dte值更改周期，单位s。[该值只在自定义动画过程中起作用]-->
+        <integer name="indicatorActionChangeCycle">4</integer> <!-- 指示灯动作更改周期，单位s。[该值只在自定义动画过程中起作用]-->
+        <integer name="gearSwitch">1</integer> <!-- 档位指示灯开关， 1档位指示灯生效；0不生效。[该值只在自定义动画过程中起作用]-->
+        <integer name="indicatorSwitch">1</integer> <!-- 指示灯动画总开关，1指示灯动画生效；0不生效。[该值只在自定义动画过程中起作用]-->
+    </indicatorSetting>
+    <instrumentSetting>
+        <integer name="maxCarSpeed">260</integer> <!-- 最大时速 [240-320]，该值要大于carSpeed-->
+        <integer name="maxRotationSpeed">8000</integer>  <!-- 最大转速 [4000-9999]，该值要大于rotationSpeed-->
+        <string name="carSpeed">5,40,110,160,220,190,210,180,260,200,150,80,20</string> <!-- 左表盘表针往复转动值，每一个值的取值范围是[0, maxCarSpeed]，单位km/h。[该值只在自定义动画过程中起作用]-->
+        <string name="rotationSpeed">200,1000,1500,4000,6000,8000,5500,4000,2000,500</string> <!-- 右表盘表针往复转动值，每一个值的取值范围是[0, maxRotationSpeed]，单位r/min。[该值只在自定义动画过程中起作用]-->
+        <integer name="carSpeedDuration">1000</integer> <!-- 左表盘表针每次转动动画时长，单位ms。[该值只在自定义动画过程中起作用]-->
+        <integer name="rotationSpeedDuration">1000</integer> <!-- 右表盘表针每次转动动画时长，单位ms。 [该值只在自定义动画过程中起作用]-->
+        <integer name="pointerAniInterval">500</integer> <!-- 每两次指针转动动画间隔，单位ms。 [该值只在自定义动画过程中起作用]-->
+        <string name="waterTemperatureLightNum">3,7,11,8,4,1</string> <!-- 水温条点亮格数，每一个值的取值范围是[0-11]。[该值只在自定义动画过程中起作用]-->
+        <string name="fuelTankLightNum">2,6,10,7,3,0</string> <!-- 油箱条点亮格数，每一个值的取值范围是[0-11]。[该值只在自定义动画过程中起作用]-->
+        <integer name="waterTemperatureChangeCycle">10</integer> <!-- 水温条值更改周期，单位ms。[该值只在自定义动画过程中起作用]-->
+        <integer name="fuelTankChangeCycle">15</integer> <!-- 油箱条值更改周期，单位ms。[该值只在自定义动画过程中起作用]-->
+        <integer name="waterTemperatureAniSpeed">1000</integer> <!-- 水温条动画速度，单位ms。[该值只在自定义动画过程中起作用]-->
+        <integer name="fuelTankAniSpeed">1000</integer> <!-- 油箱条动画速度，单位ms。[该值只在自定义动画过程中起作用]-->
+        <string name="epower">5,20,40,50,70,40,60,50,90,80,30,10</string> <!-- 电耗动画速度，单位ms。[该值只在自定义动画过程中起作用]-->
+        <integer name="epowerDuration">1000</integer> <!-- 电耗动画速度，单位ms。[该值只在自定义动画过程中起作用]-->
+		<integer name="mockPageAniSpeed">10000</integer> <!-- 主题标签页切换速度，单位ms。[该值只在自定义动画过程中起作用]-->
+    </instrumentSetting>
+</settings>
